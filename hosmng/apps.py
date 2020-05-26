@@ -1,5 +1,8 @@
 from django.apps import AppConfig
 
 
-class HosmngConfig(AppConfig):
+class HosmngConfigdjango_mysql(AppConfig):
     name = 'hosmng'
+
+    def ready(self):
+     	import hosmng.signals
